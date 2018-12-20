@@ -1,6 +1,6 @@
 <?php
 
-namespace Xuying;
+namespace Xuying\SSO;
 
 /**
  * Validation result

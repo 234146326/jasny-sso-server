@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 
-$broker = new Xuying\SSO\Broker('http://192.168.3.25:19997', 'Julias', 'ceda63kmhp');
+$broker = new \Xuying\SSO\Broker('http://192.168.3.25:19997', 'Julias', 'ceda63kmhp');
 
 if (empty($_REQUEST['command']) || !method_exists($broker, $_REQUEST['command'])) {
     header("Content-Type: application/json");

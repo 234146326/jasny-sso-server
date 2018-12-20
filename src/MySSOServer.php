@@ -1,7 +1,7 @@
 <?php
 namespace Xuying\SSO;
 
-use Xuying\ValidationResult;
+use Xuying\SSO\ValidationResult;
 use Xuying\SSO;
 
 /**

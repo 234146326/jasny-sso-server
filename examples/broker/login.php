@@ -1,7 +1,7 @@
 <?php
 use Jasny\SSO\NotAttachedException;
 require_once __DIR__ . '/../../vendor/autoload.php';
-$broker = new Xuying\SSO\Broker('http://192.168.3.25:19997', 'Julias', 'ceda63kmhp');
+$broker = new \Xuying\SSO\Broker('http://192.168.3.25:19997', 'Julias', 'ceda63kmhp');
 
 $broker->attach(true);
 
@@ -17,7 +17,7 @@ try {
 } catch (NotAttachedException $e) {
     header('Location: ' . $_SERVER['REQUEST_URI']);
     exit;
-} catch (Jasny\SSO\Exception $e) {
+} catch (Xuying\SSO\Exception $e) {
     $errmsg = $e->getMessage();
 }
 
