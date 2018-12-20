@@ -1,0 +1,23 @@
+{
+    "name": "xuying/jasny-sso-server",
+    "description": "composer require xuying/jasny-sso-server",
+    "authors": [
+        {
+            "name": "yadan",
+            "email": "15889984263@163.com"
+        }
+    ],
+    "require": {
+        "jasny/sso": "^0.3.0"
+    },
+    "autoload": {
+        "classmap": [],
+        "psr-4": {
+            "Xuying\\SSO\\": "src/"
+        },
+        "files": [
+
+        ]
+    }
+	
+}
