@@ -99,9 +99,9 @@ abstract class Server
             $headers = getallheaders();
             //fixme Authorization 的设置是无效的，请用接受其它名称
             // fixme 如果把 Authorization 修改成 Authorizations,那么客户端Broker.php 《line 198》 curl_setopt($ch, CURLOPT_HTTPHEADER, ['Accept: application/json', 'Authorizations: Bearer '. $this->getSessionID()]); 也需要修改
-            if (isset($headers['Authorization']) &&  strpos($headers['Authorization'], 'Bearer') === 0) {
-                $headers['Authorization'] = substr($headers['Authorization'], 7);
-                return $headers['Authorization'];
+            if (isset($headers['Authorizations']) &&  strpos($headers['Authorizations'], 'Bearer') === 0) {
+                $headers['Authorizations'] = substr($headers['Authorizations'], 7);
+                return $headers['Authorizations'];
             }
             if (isset($_GET['access_token'])) {
                 return $_GET['access_token'];

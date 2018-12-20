@@ -8,8 +8,8 @@ if (isset($_GET['sso_error'])) {
     header("Location: error.php?sso_error=" . $_GET['sso_error'], true, 307);
     exit;
 }
-$broker = new Jasny\SSO\Broker('http://192.168.3.25:19997', 'Julias', 'ceda63kmhp');
-//$broker = new Jasny\SSO\Broker(getenv('SSO_SERVER'), getenv('SSO_BROKER_ID'), getenv('SSO_BROKER_SECRET'));
+$broker = new Xuying\SSO\Broker('http://192.168.3.25:19997', 'Julias', 'ceda63kmhp');
+
 $broker->attach(true);
 
 try {
